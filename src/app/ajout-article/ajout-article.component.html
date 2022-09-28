@@ -1,0 +1,26 @@
+<div class="container" id="main-container">
+  <div class="submit-form">
+        <h1>Ajouter un nouveau article</h1>
+      <div class="col-md-9">
+        <label for="designation">Designation</label>
+        <input type="text" class="form-control" id="designation" required [(ngModel)]="articleobj.designation"
+          name="designation" />
+      </div>
+
+      <div class="col-md-1">
+        <label for="unite">Unite</label>
+        <input class="form-control" id="unite" required [(ngModel)]="articleobj.unite" name="unite" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="prixUnitaire">Prix unitaire</label>
+        <input class="form-control" id="prixUnitaire" required [(ngModel)]="articleobj.prixUnitaire"
+          name="prixUnitaire" />
+      </div>
+      <br>
+
+      <button (click)="saveArticle()" class="btn btn-success">Ajouter</button>
+
+    
+  </div>
+</div>

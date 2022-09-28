@@ -1,0 +1,64 @@
+<div class="container">
+  <h1>Gérer les articles</h1>
+  <form class="row g-3">
+    <div class="col-md-10">
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Rechercher un article..." aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">Rechercher</button>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-success" (click)="ajouterArticle()">Ajouter un article</button>
+    </div>
+  </form>
+  <br>
+
+  <div class="container" id="main-container">
+    <div class="list row">
+      <div class="col-md-8">
+
+      </div>
+
+
+
+      <table class="table table-striped">
+
+        <thead>
+
+          <tr>
+            <th scope="col">Numero article</th>
+            <th scope="col">designation</th>
+            <th scope="col">Unité</th>
+            <th scope="col">Prix unitaire</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr *ngFor="let art of articles " class="col-md-6 col-xl-5">
+            <td>{{art.numArticle}}</td>
+            <td>{{art.designation}}</td>
+            <td>{{art.unite}}</td>
+            <td>{{art.prixUnitaire}}</td>
+            <td>
+              <div class="float-right btn-group btn-group-sm">
+                <button (click)="deleteart(art.numArticle)" class="btn btn-danger">Supprimer</button>
+              </div>
+              &nbsp;
+              <div class="float-right btn-group btn-group-sm">
+                <button type="submit" class="btn btn-primary" (click)="updateArticle(art.numArticle)">Modifier</button>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+
+
+      </table>
+
+    </div>
+  </div>
+
+</div>

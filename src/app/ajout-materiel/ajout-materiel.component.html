@@ -1,0 +1,35 @@
+<div class="container" id="main-container">
+  <div class="submit-form">
+   
+      <h1>Ajouter un nouveau materiel</h1>
+      <div class="col-md-9">
+        <label for="designation">Designation</label>
+        <input type="text" class="form-control" id="designation" required [(ngModel)]="materielobj.designation"
+          name="designation" />
+      </div>
+
+      <div class="col-md-1">
+        <label for="unite">Unite</label>
+        <input class="form-control" id="unite" required [(ngModel)]="materielobj.unite" name="unite" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="prixUnitaire">Prix unitaire</label>
+        <input class="form-control" id="prixUnitaire" required [(ngModel)]="materielobj.prixUnitaire"
+          name="prixUnitaire" />
+      </div>
+
+      <div class="col-md-1">
+        <label for="quantite">Quantite</label>
+        <input class="form-control" id="quantite" required [(ngModel)]="materielobj.quantite" name="quantite" />
+      </div>
+      <br>
+
+      <div class="col-12">
+        <button type="submit" (click)="savemateriel()" class="btn btn-success">Ajouter</button>
+      </div>
+
+   
+    
+  </div>
+</div>

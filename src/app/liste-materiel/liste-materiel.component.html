@@ -1,0 +1,73 @@
+<div class="container" id="main-container">
+
+  <h1>Gérer les materiels</h1>
+  <form class="row g-3">
+    <div class="col-md-10">
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Rechercher un materiel..." aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">Rechercher</button>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-success" (click)="ajouterMateriel()">Ajouter un materiel</button>
+    </div>
+  </form>
+  <br>
+  <div class="container">
+    <div class="list row">
+      <div class="col-md-8">
+  
+      </div>
+  
+  
+  
+      <table class="table table-striped">
+  
+        <thead>
+  
+          <tr>
+            <th scope="col">Id Materiel</th>
+            <th scope="col">Designation</th>
+            <th scope="col">unite</th>
+            <th scope="col">Prix unitaire</th>
+            <th scope="col">Quantite</th>
+          </tr>
+  
+        </thead>
+  
+        <tbody>
+  
+          <tr *ngFor="let mat of materiels " class="col-md-6 col-xl-5">
+            <td>{{mat.idMateriel}}</td>
+            <td>{{mat.designation}}</td>
+            <td>{{mat.unite}}</td>
+            <td>{{mat.prixUnitaire}}</td>
+            <td>{{mat.quantite}}</td>
+  
+            <td>
+              <div class="float-right btn-group btn-group-sm">
+                <button (click)="deletemat(mat.idMateriel)" class="btn btn-danger">Supprimer</button>
+              </div>&ensp;
+              &nbsp;
+              <div class="float-right btn-group btn-group-sm">
+                <button class="btn btn-primary" (click)="updateMateriel(mat.idMateriel)">Modifier</button>
+              </div>
+            </td>
+  
+            <td>
+  
+            </td>
+          </tr>
+  
+        </tbody>
+  
+  
+      </table>
+  
+    </div>
+  </div>
+  
+
+
+</div>
